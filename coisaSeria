@@ -1,0 +1,106 @@
+Gabriel Pimenta
+gabriel.bonfim@4linux.com.br
+
+PREMISSAS DO PROJETO
+*Desempenho
+*100% Distribuido
+*Design Simples
+*Suportar desenvolvimento não linear
+*Ser eficiente com grandes projetos
+
+VANTAGENS DE SER DISTRIBUIDO
+*Trabalhar Offiline
+*Commit constante, sem medo
+*Velocidade
+*Branchs locais
+*Desenvolvedor decide quando ou o que deve subir
+
+SEGURO
+*Armazena hash dos arquivos (hash = comparação dos códigos, cada alteração, um novo hash)
+*Garante integridade dos arquivos e das versões
+*Kernel.org Invalido, GIT garantiu integridade dos repositorios (2011)
+
+GERENCIADOR DE REPOSITORIOS
+*Github (cloud)
+*Gitlab
+*Bitbucket (cloud)
+
+QUEM USA GIT
+
+GOOGLE TENDENCIA (comparação entre versionadores)
+
+Instalar (https://git-scm.com/download/win)
+
+CONFIGURANDO O GIT
+Confirgurar informações para o log
+git config --global user.name "Thamires Heloa"
+git config --global user.email thamires.lima@animaeducacao.com.br
+git config --list (para verificar informações inseridas)
+-- global (configura as informações globais, se tirar o global, configura apenas neste projeto)
+
+mkdir git_bh (criar diretorio)
+cd git_bh (acessar diretorio)
+git init (dentro de um diretorio, para tornar uma pasta, um diretorio git)
+ls -la (ver arquivos do diretorios, la inclui arquivos ocultos, l não)
+
+vim arq001
+i = inserção
+:x = salva o arquivo e sai
+
+git commit --amend (alterar último commit)
+
+GIT CLONE
+
+ESTADOS DOS ARQUIVOS
+git status
+*Commited: Arquivos Consolidados
+*Modified: Arquivos Modificados
+*Untracked: Arquivo que não sofreram alteração, não foi submetido ao git
+*Staged: A Arquivos modificados marcados para consolidação
+
+UNTRACKED >>
+git add arq03 >> STAGE >>
+git commit -m "Funcao Nova" >> UNMODIFIED >>
+git commit --amend >> MODIFIED >>
+git add >> STAGE >> commit >> UNMODIFIED
+
+Criar nova branch
+>> git branch (ver todas as branch)
+>> git branch nomeBranch (copia conteudo da branch atual)
+>> git checkout nomeBranch (entrar na nova branch)
+>> git branch -d nomeBranch (deletar branch)
+
+Limpar tela Ctrl L
+
+CLONAR UMA BRANCH DA NUVEM
+>>  git clone https://git.animaeducacao.com.br/desenv-web-php/helpdesksociesc
+
+ENVIAR UM PROJETO PARA A NUVEM
+git remote add origin git@github.com:thamiresheloa/treinamentoGIT.git
+
+git remote -v
+origin  git@github.com:thamiresheloa/treinamentoGIT.git (fetch)
+origin  git@github.com:thamiresheloa/treinamentoGIT.git (push)
+
+git push origin master
+
+ALTERAR CAMINHO A ENVIAR
+git remote set-url origin https://github.com/thamiresheloa/treinamentoGIT.git
+
+git push origin master
+
+PUSH
+PULL
+FETCH
+
+PUSH = Envia do local para o servidor
+PULL = Puxa tudo do servidor
+FETCH = Apenas mostra o que tem de diferente no servidor, para puxar posteriormente
+
+git reset HEAD~1 (desfaz o ultimo Commit)
+git reset HEAD~2 (desfaz os ultimos dois Commits)
+
+rm nomeArquivo (remover arquivo)
+
+git remote set-url origin https://github.com/RaphaelAssis/MEassis.git
+git remote set-url origin https://github.com/ThamiresHeloa/MEassis.git
